@@ -78,16 +78,18 @@ class MealItem extends StatelessWidget {
           ]),
           Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Row(children: [
+            child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
              Row(children: [
                Icon(Icons.schedule),
                SizedBox(width: 6,),
                Text('$duration min',style: TextStyle(fontWeight: FontWeight.bold,),),
              ],),
               Row(children: [
-               Icon(Icons.schedule),
+               Icon(Icons.work),
                SizedBox(width: 6,),
-               Text('$duration min',style: TextStyle(fontWeight: FontWeight.bold,),),
+               Text('$complexityText',style: TextStyle(fontWeight: FontWeight.bold,),),
              ],),
             ],),
           )
