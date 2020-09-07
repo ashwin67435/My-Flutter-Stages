@@ -2,6 +2,16 @@
 
 A new Flutter project.
 
+## screenshots
+
+### categories
+
+https://user-images.githubusercontent.com/60846372/92359980-b90f2a80-f109-11ea-9031-09e1525359bb.png
+
+### mealsitem
+
+https://user-images.githubusercontent.com/60846372/92360163-0390a700-f10a-11ea-9479-0032bfe8ebf2.png
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
