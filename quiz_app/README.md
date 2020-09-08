@@ -1,6 +1,10 @@
-# first_app
+# Quiz_app
 
 A new Flutter project.
+
+# ScreenShots
+
+<img src="https://user-images.githubusercontent.com/60846372/92362085-15c01480-f10d-11ea-9664-3749e47c6609.png" height="500px">
 
 ## Getting Started
 
