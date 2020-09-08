@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import '../screens/meals_detail_screen.dart';
 import '../models/meals.dart';
 
 class MealItem extends StatelessWidget {
+  final String id;
   final String title;
   final String imageUrl;
   final int duration;
@@ -9,6 +11,7 @@ class MealItem extends StatelessWidget {
   final Affordability affordability;
 
   MealItem({
+    @required this.id,
     @required this.title,
     @required this.affordability,
     @required this.complexity,
@@ -31,10 +34,31 @@ class MealItem extends StatelessWidget {
         return 'Unknown';
     }
   }
+
+  String get affordabilityText {
+    switch (affordability){
+      case Affordability.Affordable:
+        return 'Affordable';
+        break;
+      case Affordability.Luxurious:
+        return 'Luxurious';
+        break;
+      case Affordability.Pricey:
+        return 'Pricey';
+        break;
+      default:
+        return 'Unknown';
+    }
+  }
+  
+  void selectMeal(BuildContext ctx){
+    Navigator.pushNamed(ctx,MealsDetailScreen.routePath,arguments: id);
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => selectMeal(context),
       child: Card(
         elevation: 7,
         shape: RoundedRectangleBorder(
@@ -90,6 +114,11 @@ class MealItem extends StatelessWidget {
                Icon(Icons.work),
                SizedBox(width: 6,),
                Text('$complexityText',style: TextStyle(fontWeight: FontWeight.bold,),),
+             ],),
+             Row(children: [
+               Icon(Icons.attach_money),
+               SizedBox(width: 6,),
+               Text('$affordabilityText',style: TextStyle(fontWeight: FontWeight.bold,),),
              ],),
             ],),
           )

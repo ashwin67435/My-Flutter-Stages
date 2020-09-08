@@ -17,10 +17,10 @@ class _TransactionItemState extends State<TransactionItem> {
   void initState() {
     // TODO: implement initState
     const avatarColor = [
-      Colors.red,
-      Colors.blue,
-      Colors.black,
-      Colors.yellow,
+      Colors.purple,
+      Colors.purple,
+      Colors.purple,
+      Colors.purple,
     ];
     _bgColor = avatarColor[Random().nextInt(4)];
     super.initState();
