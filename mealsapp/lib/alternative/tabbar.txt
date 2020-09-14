@@ -1,0 +1,22 @@
+DefaultTabController(
+      initialIndex: 0,//Default
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('Meals'),
+            bottom: TabBar(tabs: [
+              Tab(
+                icon: Icon(Icons.category),
+                text: 'Categories',
+              ),
+              Tab(
+                icon: Icon(Icons.star),
+                text:'Favorite',
+              ),
+            ]),
+          ),
+          body: TabBarView(children: [
+            CategoriesScreen(),
+            FavoriteScreen(),
+          ]),
+        ),);

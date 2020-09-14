@@ -20,7 +20,7 @@ class MealItem extends StatelessWidget {
   });
 
   String get complexityText {
-    switch (complexity){
+    switch (complexity) {
       case Complexity.Simple:
         return 'Simple';
         break;
@@ -36,7 +36,7 @@ class MealItem extends StatelessWidget {
   }
 
   String get affordabilityText {
-    switch (affordability){
+    switch (affordability) {
       case Affordability.Affordable:
         return 'Affordable';
         break;
@@ -50,9 +50,13 @@ class MealItem extends StatelessWidget {
         return 'Unknown';
     }
   }
-  
-  void selectMeal(BuildContext ctx){
-    Navigator.pushNamed(ctx,MealsDetailScreen.routePath,arguments: id);
+
+  void selectMeal(BuildContext ctx) {
+    Navigator.pushNamed(
+      ctx,
+      MealsDetailScreen.routePath,
+      arguments: id,
+    );
   }
 
   @override
@@ -103,24 +107,52 @@ class MealItem extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-             Row(children: [
-               Icon(Icons.schedule),
-               SizedBox(width: 6,),
-               Text('$duration min',style: TextStyle(fontWeight: FontWeight.bold,),),
-             ],),
-              Row(children: [
-               Icon(Icons.work),
-               SizedBox(width: 6,),
-               Text('$complexityText',style: TextStyle(fontWeight: FontWeight.bold,),),
-             ],),
-             Row(children: [
-               Icon(Icons.attach_money),
-               SizedBox(width: 6,),
-               Text('$affordabilityText',style: TextStyle(fontWeight: FontWeight.bold,),),
-             ],),
-            ],),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.schedule),
+                    SizedBox(
+                      width: 6,
+                    ),
+                    Text(
+                      '$duration min',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.work),
+                    SizedBox(
+                      width: 6,
+                    ),
+                    Text(
+                      '$complexityText',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.attach_money),
+                    SizedBox(
+                      width: 6,
+                    ),
+                    Text(
+                      '$affordabilityText',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           )
         ]),
       ),

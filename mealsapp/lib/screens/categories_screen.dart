@@ -10,11 +10,7 @@ class CategoriesScreen extends StatefulWidget {
 class _CategoriesScreenState extends State<CategoriesScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title:const Text('DeliMeal'),
-      ),
-      body: GridView(
+    return GridView(
         padding: EdgeInsets.all(25),
         children: DUMMY_CATEGORIES
             .map((e) => CategoryItem(
@@ -29,7 +25,6 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-      ),
-    );
+      );
   }
 }
