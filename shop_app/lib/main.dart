@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.deepOrange,
           fontFamily: 'Lato',
         ),
-        home: ProductOverviewScreen(),
+        home: ProductsOverviewScreen(),
         routes: {
           ProductDetailScreen.routePath: (ctx) => ProductDetailScreen(),
           CartScreen.routePath: (ctx)=>CartScreen(),
